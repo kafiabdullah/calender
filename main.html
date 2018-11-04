@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Main Page</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+	<script>
+		//initialize firebase
+		var config = {
+			apiKey: "AIzaSyDJFbbPR1n6if3yX1giV8KvW_Pyq88aBKk",
+			authDomain: "calendar-c07dd.firebaseapp.com",
+			databaseURL: "https://calendar-c07dd.firebaseio.com",
+			projectId: "calendar-c07dd",
+			storageBucket: "calendar-c07dd.appspot.com",
+			messagingSenderId: "1041934999578"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<div class="nav-container-main">
+			<nav class="main-nav">
+				<div class="nav-logo">
+					<a href="index.html">
+						<i class="fas fa-cubes"></i>
+					</a>
+				</div>
+				<div class="nav-menu">
+					<ul class="nav-list">	
+						<li>
+							<a class="nav-menu-link nav-list-items" id="main-home" href="main.html">HOME</a>		
+						</li>
+						<li>
+							<a class="nav-menu-link nav-list-items" href="settings.html">SETTINGS</a>	
+						</li>
+						<li>
+							<a class="nav-menu-link nav-list-items" id="main-sign-out" href="#">SIGN OUT</a>
+						</li>
+					</ul>	
+				</div>
+				<div class="mobile-nav-menu">
+					<a class="mobile-nav-icon">
+						<i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i> 
+					</a>
+				</div>
+			</nav>
+		</div>  <!-- End of Nav Container -->
+
+		<nav class="mobile-nav" id="mobile-nav">
+				<div class="mobile-menu" id="close-menu">
+					<ul class="mobile-list" id="mobile-list">
+						<li>
+							<a class="nav-active">
+								<div class="nav-list-mobile" class="close-menu">Close Menu</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="main.html">
+								<div class="nav-list-mobile" id="mobile-contact" class="close-menu">Home</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#">
+								<div class="nav-list-mobile" class="close-menu">Settings</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#">
+								<div class="nav-list-mobile" class="close-menu">Sign Out</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav> 
+
+		<div class="main-content-wrapper">
+			<div class="main-meeting-links">
+				<div class="main-links-title">
+					<h3 class="your-meetings">Meeting Links</h3>
+				</div>
+				<div class="create-link">
+					<button class="landing-button create-link-button">Create Meeting</button>
+				</div>
+			</div>
+			<div class="link-list-container">
+				<ul class="link-list">	
+					<li class="link-li-container">
+						<div class="ind-link-text"><a class="ind-link" id="ind-link-id" href="#">Example Link 1</a></div>
+						<div class="link-edit-container">
+							<div class="meeting-link-buttons">
+								<button class="edit-meeting-link meeting-buttons" href="#">Edit</button>
+								<button class="copy-meeting-link meeting-buttons" onclick="copyToClipboard('#ind-link-id')">Copy</button>
+								<button class="visit-meeting-link meeting-buttons" href="calendar.html">Visit</button>
+								<button class="delete-meeting-link meeting-buttons delete-meeting">Delete</button>
+							</div>
+						</div>
+					</li>
+					<li class="link-li-container">
+						<div class="ind-link-text"><a class="ind-link" href="#">Example Link 1</a></div>
+						<div class="link-edit-container">
+							<div class="meeting-link-buttons">
+								<button class="edit-meeting-link meeting-buttons">Edit</button>
+								<button class="copy-meeting-link meeting-buttons">Copy</button>
+								<button class="visit-meeting-link meeting-buttons">Visit</button>
+								<button class="delete-meeting-link meeting-buttons delete-meeting">Delete</button>
+							</div>
+						</div>
+					</li>
+					<li class="link-li-container">
+						<div class="ind-link-text"><a class="ind-link" href="#">Example Link 1</a></div>
+						<div class="link-edit-container">
+							<div class="meeting-link-buttons">
+								<button class="edit-meeting-link meeting-buttons">Edit</button>
+								<button class="copy-meeting-link meeting-buttons">Copy</button>
+								<button class="visit-meeting-link meeting-buttons">Visit</button>
+								<button class="delete-meeting-link meeting-buttons delete-meeting">Delete</button>
+							</div>
+						</div>
+					</li>
+				</ul>	
+			</div>
+			<div class="scheduled-meetings-container">
+				<div class="scheduled-header">
+					<h3 class="scheduled-title">Scheduled Meetings</h3>
+				</div>
+				<ul class="scheduled-meetings">	
+					<li class="scheduled-meetings-list">
+						<a class="ind-meeting">Scheduled Meeting 1</a>
+						<div class="link-edit-container booked-edit-container">
+							<div class="meeting-link-buttons booked-links">
+								<div class="booked-email booked-extras">Email: <span class="booked-email-text">brian@brian.com</span></div>
+								<div class="booked-timezone booked-extras">Timezone: <span class="booked-email-text">GMT -5</span></div>
+								<div class="booked-at booked-extras">Booked At: <span class="booked-email-text">Sept. 21, 2018</span></div>
+								<button class="cancel-booked">Cancel Meeting</button>
+								<!--
+								<div class="link-option-container" id="link-option-dots"><a class="ind-link-options scheduled-dots">•••</a></div>
+							-->
+							</div>	
+						</div>			
+					</li>
+					<li class="scheduled-meetings-list">
+						<a class="ind-meeting">Scheduled Meeting 2</a>
+						<div class="link-edit-container booked-edit-container">
+							<div class="meeting-link-buttons booked-links">
+								<div class="booked-email booked-extras">Email: <span class="booked-email-text">brian@brian.com</span></div>
+								<div class="booked-timezone booked-extras">Timezone: <span class="booked-email-text">GMT -5</span></div>
+								<div class="booked-at booked-extras">Booked At: <span class="booked-email-text">Sept. 21, 2018</span></div>
+								<button class="cancel-booked">Cancel Meeting</button>
+							</div>	
+						</div>		
+					</li>
+					<li class="scheduled-meetings-list">
+						<a class="ind-meeting">Scheduled Meeting 3</a>
+						<div class="link-edit-container booked-edit-container">
+							<div class="meeting-link-buttons booked-links">
+								<div class="booked-email booked-extras">Email: <span class="booked-email-text">brian@brian.com</span></div>
+								<div class="booked-timezone booked-extras">Timezone: <span class="booked-email-text">GMT -5</span></div>
+								<div class="booked-at booked-extras">Booked At: <span class="booked-email-text">Sept. 21, 2018</span></div>
+								<button class="cancel-booked">Cancel Meeting</button>
+							</div>	
+						</div>
+					</li>
+				</ul>	
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
