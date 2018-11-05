@@ -1,113 +1,126 @@
 /*Extra small devices (portrait phones, less than 576px)*/
 
 @media (max-width: 320px) {
-    .scheduler-top{margin-left: 33% !important;}
-    .dhx_cal_navline div{}
-    .dhx_cal_navline{}
-    .dhx_cal_date{}
-    .dhx_cal_tab{}
-    .day_tab{}
+    .scheduler-top{margin-left: 40% !important;margin-top: 10px !important;height: 30px;width: 70px;padding: 0 0;}
+    
+    .dhx_cal_navline{
+    margin-top: -12px;
+}
      .dhx_cal_tab_first{
     left: 0px !important;
-    width: 30px !important;
-    font-size: 10px !important;
+    width: 40px !important;
+    
 }
     .dhx_cal_tab_last{
-    width: 30px !important;
-    left: 61px !important;
-    font-size: 10px !important;
+    width: 40px !important;
+    left: 80px !important;
+    
 }
     .week_tab{
     right: auto !important;
-    left: 30px !important;
-    width: 30px !important;
-    font-size: 10px !important;
+    left: 40px !important;
+    width: 40px !important;
+    
 }
- .dhx_cal_date{font-size: 12px !important;word-spacing: 0px !important;width: 100% !important;}
+ .dhx_cal_navline .dhx_cal_date{font-size: 13px !important;margin-top: 30px;}
 .dhx_cal_today_button{
-    width: 33px !important;
-    left: 160px;
-    font-size: 10px !important;
+    width: 50px !important;
+    left: 132px;
+    
 }
 .dhx_cal_prev_button{
-    width: 20px !important;
-    left: 197px;
+    width: 25px !important;
+    left: 187px;
 }
 .dhx_cal_next_button{
-    width: 20px !important;
-    left: 218px;
-}
-
-}
-
-@media (min-width: 321px) and (max-width: 412px) {
-    .scheduler-top{
-    margin-left: 35% !important;
-    }
-    .dhx_cal_navline{}
-    .dhx_cal_tab{}
-     .dhx_cal_tab_first{
-    left: 0px !important;
-    width: 30px !important;
-    font-size: 11px !important;
-}
-    .dhx_cal_tab_last{
-    width: 35px !important;
-    left: 63px !important;
-    font-size: 11px !IMPORTANT;
-}
-    .week_tab{
-    right: auto !important;
-    left: 30px !important;
-    font-size: 11px !important;
-    width: 32px !important;
-}
- .dhx_cal_date{font-size: 7px !important;word-spacing: 0px !important;width: 100% !important;}
-.dhx_cal_today_button{
-    width: 35px !important;
-    left: 198px;
-    font-size: 11px !important;
-}
-.dhx_cal_prev_button{
-    width: 20px !important;
-    left: 238px;
-}
-.dhx_cal_next_button{
-    width: 20px !important;
+    width: 25px !important;
     right: 0;
 }
 
 }
 
-@media (min-width: 413px) and (max-width: 575px) {
-    .scheduler-top{margin-left: 37% !important;}
-    .dhx_cal_navline{}
-    .dhx_cal_tab{}
+@media (min-width: 321px) and (max-width: 412px) {
+    .scheduler-top{margin-left: 40% !important;margin-top: 10px !important;height: 30px;width: 70px;padding: 0 0;}
+    
+    .dhx_cal_navline{
+    margin-top: -12px;
+}
      .dhx_cal_tab_first{
     left: 0px !important;
-    width: 35px !important;
-    padding: 0px 0px;
+    width: 45px !important;
+   
 }
     .dhx_cal_tab_last{
-    width: 38px !important;
-    left: 71px !important;
+    width: 40px !important;
+    left: 91px !important;
+    
 }
     .week_tab{
     right: auto !important;
-    left: 35px !important;
-    width: 35px !important;
+    left: 45px !important;
+    width: 45px !important;
+   
 }
- .dhx_cal_date{font-size: 10px !important;word-spacing: -1px !important;text-align: center !important;margin: 0px 11px;}
+ .dhx_cal_navline .dhx_cal_date{font-size: 14px !important;
+    margin-top: 30px !important;
+}
 .dhx_cal_today_button{
-    width: 40px !important;
-    left: 230px;
+    width: 60px !important;
+    left: 160px;
+    
 }
 .dhx_cal_prev_button{
-    width: 20px !important;
-    left: 276px;
+    width: 25px !important;
+    left: 227px;
 }
 .dhx_cal_next_button{
+    width: 25px !important;
+    right: 0;
+}
+
+}
+@media(max-width: 374px) and (min-width: 360px){
+    .dhx_cal_prev_button{
+    left: 226px;
     width: 20px !important;
+}
+    .dhx_cal_next_button{width: 20px !important;right: 0;}
+}
+
+@media (min-width: 413px) and (max-width: 575px) {
+    .scheduler-top{margin-left: 40% !important;margin-top: 20px !important;height: 30px;padding: 0px 0px;width: 80px;}
+    
+    .dhx_cal_navline{
+    margin-top: -12px;
+}
+     .dhx_cal_tab_first{
+    left: 0px !important;
+    width: 45px !important;
+    
+}
+    .dhx_cal_tab_last{
+    width: 40px !important;
+    left: 91px !important;
+    
+}
+    .week_tab{
+    right: auto !important;
+    left: 45px !important;
+    width: 45px !important;
+    
+}
+ .dhx_cal_navline .dhx_cal_date{font-size: 15px !important;margin-top: 30px !important;}
+.dhx_cal_today_button{
+    width: 70px !important;
+    left: 185px;
+   
+}
+.dhx_cal_prev_button{
+    width: 25px !important;
+    left: 266px;
+}
+.dhx_cal_next_button{
+    width: 25px !important;
     right: 0;
 }
 
@@ -119,16 +132,46 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     
     .scheduler-top{
-    margin-left: 33% !important;
+    margin-left: 45% ;
     }
     .dhx_cal_navline{}
-     .dhx_cal_date{}
+     .dhx_cal_date{margin-top: 0px;font-size: 13px !important;}
     .dhx_cal_tab{}
     .dhx_cal_tab_first{}
     .dhx_cal_tab_last{}
     .week_tab{}
    
 }
+@media (min-width: 550px) and (max-width: 748px){
+
+    .dhx_cal_next_button{
+    /* right: 0; */
+}
+    .dhx_cal_prev_button{
+    /* left: 358px !important; */
+}
+.dhx_cal_today_button{
+    /* left: 280px !important; */
+}
+     .scheduler-top{
+    margin-left: 45% !important;
+}
+}
+@media (min-width: 548px) and (max-width: 748px){
+    .dhx_cal_next_button{
+    /* right: 0; */
+}
+    .dhx_cal_prev_button{
+    /* left: 358px !important; */
+}
+.dhx_cal_today_button{
+    /* left: 280px !important; */
+}
+     .scheduler-top{
+    margin-left: 45% !important;
+}
+        }
+
 
 /*Medium devices (tablets, 768px and up)*/
 
@@ -166,7 +209,7 @@
 @media (min-width: 1135px) and (max-width: 1199.98px) {
 
     .scheduler-top{
-    margin-left: 33% !important;
+    margin-left: 45% !important;
     }
     .dhx_cal_navline{}
 }
